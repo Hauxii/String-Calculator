@@ -18,7 +18,19 @@ public class Calculator {
 	}
 
 	private static String[] splitNumbers(String numbers){
-		return numbers.split(",|\n");
+		if(numbers.startsWith("//")){
+			if(!numbers.startsWith("//\n")){
+				String[] splitted = numbers.split("\n", 2);
+				String[] del = splitted[0].split("");
+				String delimiter = del[2];
+				return splitted[1].split(delimiter);
+			}
+			;
+			String ret = numbers.replace("//\n\n", "");
+			return	ret.split("\n");
+		}
+		else
+			return numbers.split(",|\n");
 	}
       
     private static int sum(String[] numbers){
