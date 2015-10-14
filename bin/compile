@@ -2,4 +2,4 @@
 if [ ! -d classes ]; then 
   mkdir classes 
 fi
-javac src/main/java/is/ru/String-Calculator/*.java -d classes
+javac src/main/java/is/ru/StringCalculator/*.java -d classes

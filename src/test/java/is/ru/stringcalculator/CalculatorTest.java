@@ -1,4 +1,4 @@
-package is.ru.String-Calculator;
+package is.ru.StringCalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 public class CalculatorTest {
 
 	public static void main(String args[]) {
-      org.junit.runner.JUnitCore.main("is.ru.String-Calculator.CalculatorTest");
+      org.junit.runner.JUnitCore.main("is.ru.StringCalculator.CalculatorTest");
     }
 
 	@Test

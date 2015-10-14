@@ -6,4 +6,4 @@ fi
 #on linux
 #javac -classpath "classes:lib/junit-4.11.jar" src/test/java/is/ru/String-Calculator/*.java -d classes
 #on windows
-javac -classpath "classes;lib\junit-4.11.jar" src/test/java/is/ru/String-Calculator/*.java -d classes
+javac -classpath "classes;lib\junit-4.11.jar" src/test/java/is/ru/StringCalculator/*.java -d classes
