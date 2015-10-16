@@ -35,8 +35,22 @@ public class Calculator {
       
     private static int sum(String[] numbers){
  	    int total = 0;
+ 	    String fail = "“Negatives not allowed: ";
+ 	    int checker = 0;
         for(String number : numbers){
-		    total += toInt(number);
+        	int sum = toInt(number);
+        	if(sum < 0){
+        		if(checker > 0){
+        			fail += ", ";
+        		}
+        		fail += sum;
+        		checker++;
+        	}
+
+		    total += sum;
+		}
+		if(checker > 0){
+			throw new IllegalArgumentException(fail);
 		}
 		return total;
     }

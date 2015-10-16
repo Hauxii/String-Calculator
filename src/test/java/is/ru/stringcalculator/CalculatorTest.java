@@ -53,4 +53,23 @@ public class CalculatorTest {
     public void testMultipleDelimeters3(){
     	assertEquals(6, Calculator.add("//\n\n1\n2\n3"));
     }
+
+    @Test
+    (expected=IllegalArgumentException.class)
+        public void testNegNumber(){
+        assertEquals("Negatives not allowed: -1", Calculator.add("-1,2"));
+    }
+
+   	@Test
+    (expected=IllegalArgumentException.class)
+    	public void testNegNumberS(){
+    	assertEquals("Negatives not allowed: -2, -3", Calculator.add("1, -2, -3"));
+    }
+
+    @Test
+    (expected=IllegalArgumentException.class)
+    	public void testAllNegNumberS(){
+    	assertEquals("Negatives not allowed: -1, -2, -3", Calculator.add("-1, -2, -3"));
+    }
+
 }
