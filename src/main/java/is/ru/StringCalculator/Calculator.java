@@ -46,8 +46,9 @@ public class Calculator {
         		fail += sum;
         		checker++;
         	}
-
-		    total += sum;
+        	else if(sum <= 1000){
+		    	total += sum;
+			}
 		}
 		if(checker > 0){
 			throw new IllegalArgumentException(fail);
