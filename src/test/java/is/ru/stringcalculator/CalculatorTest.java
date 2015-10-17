@@ -94,14 +94,22 @@ public class CalculatorTest {
 
     @Test
     public void testDelimiterAnyLength(){
-    	assertEquals(6, Calculator.add("//[ooo]\n1ooo2ooo3"));
+    	assertEquals(6, Calculator.add("//[***]\n1***2***3"));
     }
 
     @Test
     public void testDelimiterAnyLength1(){
     	assertEquals(6, Calculator.add("//[aaa]\n1aaa2aaa3"));
     }
+/*
+    @Test
+    public void testMultipleDelimiter(){
+    	assertEquals(6, Calculator.add("//[a][b]\n1a2b3"));
+    }
 
-
+    @Test
+    public void testMultipleDelimiter2(){
+    	assertEquals(6, Calculator.add("//[*][%]\n1*2%3"));
+    }*/
 
 }

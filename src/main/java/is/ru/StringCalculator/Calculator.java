@@ -24,6 +24,7 @@ public class Calculator {
 		}
 		else if(numbers.startsWith("//")){
 			String ret = "";
+			numbers = numbers.replaceAll("\\*", "a");
 			if(numbers.startsWith("//[")){
 				numbers = numbers.replace("//[", "");
 				String[] delimiter = numbers.split("]", 2);
