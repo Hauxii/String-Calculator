@@ -92,5 +92,16 @@ public class CalculatorTest {
     	assertEquals(0, Calculator.add("1001,1002"));
     }
 
+    @Test
+    public void testDelimiterAnyLength(){
+    	assertEquals(6, Calculator.add("//[ooo]\n1ooo2ooo3"));
+    }
+
+    @Test
+    public void testDelimiterAnyLength1(){
+    	assertEquals(6, Calculator.add("//[aaa]\n1aaa2aaa3"));
+    }
+
+
 
 }
