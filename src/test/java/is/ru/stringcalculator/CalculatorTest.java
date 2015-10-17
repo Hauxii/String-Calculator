@@ -101,7 +101,7 @@ public class CalculatorTest {
     public void testDelimiterAnyLength1(){
     	assertEquals(6, Calculator.add("//[aaa]\n1aaa2aaa3"));
     }
-/*
+
     @Test
     public void testMultipleDelimiter(){
     	assertEquals(6, Calculator.add("//[a][b]\n1a2b3"));
@@ -110,6 +110,6 @@ public class CalculatorTest {
     @Test
     public void testMultipleDelimiter2(){
     	assertEquals(6, Calculator.add("//[*][%]\n1*2%3"));
-    }*/
+    }
 
 }

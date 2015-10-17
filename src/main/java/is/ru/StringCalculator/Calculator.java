@@ -30,7 +30,12 @@ public class Calculator {
 				String[] delimiter = numbers.split("]", 2);
 				String del = delimiter[0];
 				ret = delimiter[1].replaceFirst("\n", "").replaceAll(del, ",");
-				
+				if(ret.startsWith("[")){
+					ret = ret.replace("[", "");
+					String[] delimiter2 = ret.split("]", 2);
+					String del2 = delimiter2[0];
+					ret = ret.replace("]", "").replaceAll(del2, ",");
+				}	
 			}
 			else{
 				String[] splitted = numbers.split("\n", 2);
@@ -50,16 +55,18 @@ public class Calculator {
  	    String fail = "“Negatives not allowed: ";
  	    int checker = 0;
         for(String number : numbers){
-        	int sum = toInt(number);
-        	if(sum < 0){
-        		if(checker > 0){
-        			fail += ", ";
-        		}
-        		fail += sum;
-        		checker++;
-        	}
-        	else if(sum <= 1000){
-		    	total += sum;
+        	if(!number.equals("")){
+	        	int sum = toInt(number);
+	        	if(sum < 0){
+	        		if(checker > 0){
+	        			fail += ", ";
+	        		}
+	        		fail += sum;
+	        		checker++;
+	        	}
+	        	else if(sum <= 1000){
+			    	total += sum;
+				}
 			}
 		}
 		if(checker > 0){
